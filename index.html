@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attendance Management System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-top">
+        <div>
+          <h1>Attendance Management System</h1>
+          <p>Professional assignment-ready attendance tracker for classroom management.</p>
+        </div>
+        <div class="assignment-meta">
+          <p><strong>Assignment:</strong> Student Attendance System</p>
+          <p><strong>Course:</strong> Computer Science / Attendance Project</p>
+          <p><strong>Developer:</strong> Student Name</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="form-section">
+      <div class="input-row">
+        <input id="studentRoll" type="text" placeholder="Roll number" />
+        <input id="studentName" type="text" placeholder="Student name" />
+        <button id="addStudentBtn">Add Student</button>
+      </div>
+      <div class="input-row control-row">
+        <button id="recordAttendanceBtn">Save Attendance</button>
+        <button id="exportCsvBtn">Export CSV</button>
+        <button id="clearBtn">Clear All</button>
+      </div>
+    </section>
+
+    <section class="attendance-section">
+      <div class="attendance-header">
+        <div>
+          <strong>Date:</strong>
+          <span id="currentDate"></span>
+        </div>
+        <div>
+          <strong>Saved records:</strong>
+          <span id="savedCount">0</span>
+        </div>
+      </div>
+
+      <div class="attendance-summary">
+        <div><span id="presentCount">0</span> Present</div>
+        <div><span id="absentCount">0</span> Absent</div>
+        <div><span id="totalCount">0</span> Total</div>
+      </div>
+
+      <table id="attendanceTable">
+        <thead>
+          <tr>
+            <th>Student Name</th>
+            <th>Roll No.</th>
+            <th>Present</th>
+            <th>Absent</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="empty-row">
+            <td colspan="4">Add students to begin taking attendance.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
